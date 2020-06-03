@@ -3,6 +3,8 @@ import ClockSettings from "../../components/ClockSettings/ClockSettings";
 import Display from "../../components/Display/Display";
 import Controls from "../../components/Controls/Controls";
 import classes from "./PomodoroClock.module.css";
+import beep from '../../assets/beep.wav'
+import { requirePropFactory } from "@material-ui/core";
 
 const PomodoroClock = () => {
 	const [time, setTime] = useState(1500); //seconds
@@ -78,6 +80,11 @@ const PomodoroClock = () => {
 				);
 				return !prev;
 			});
+			
+			const beepAudio = new Audio(beep);
+			beepAudio.loop = true;
+			beepAudio.play()
+			setTimeout(() => {beepAudio.loop = false}, 1500)	
 		}
 	}, [time, settings]);
 
