@@ -5,7 +5,7 @@ const PomodoroClock = () => {
 	
 	return (
 		<div className={classes.PomodoroClock}>
-			<h1>Pomodoro Clock</h1>
+			<h1>Pomodoro Clhhhfbfbock</h1>
 		</div>
 	);
 };
