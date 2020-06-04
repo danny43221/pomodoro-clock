@@ -1,5 +1,7 @@
 .ClockSetting {
-   
+   font-size: 1.2rem;
+   font-weight: 400;
+   color: rgba(0, 0, 0, .54);
 }
 
 .Setter {
@@ -8,5 +10,6 @@
    align-items: center;
    width: 6rem;
    margin: auto;
-   margin-top: 5px;
+   margin-top: 4px;
+   color: rgba(0, 0, 0, .87);
 }

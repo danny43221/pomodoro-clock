@@ -1,14 +1,30 @@
 .PomodoroClock {
-   position: absolute;
-   top: 50%;
-   left: 50%;
-   transform: translate(-50%, -50%);
-   text-align: center;
-   background-color: antiquewhite;
-   height: 30rem;
-   padding: 0rem 5rem;
-   width: 30rem;
-   display: flex;
-   flex-direction: column;
-   justify-content: space-evenly;
+	position: absolute;
+	background: white;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	height: 33rem;
+	padding: 0rem 5.25rem;
+	width: 30rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+}
+
+.Title {
+	font-weight: 500;
+	font-size: 1.3rem;
+	letter-spacing: 0.7px;
+	color: rgba(0, 0, 0, 0.87);
+}
+
+.ClockIcon {
+	position: absolute;
+	opacity: 0.3;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: #f50057;
 }

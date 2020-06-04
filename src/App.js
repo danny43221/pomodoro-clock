@@ -4,7 +4,7 @@ import PomodoroClock from './containers/PomodoroClock/PomodoroClock'
 export const App = () => {
   return (
     <div>
-      <PomodoroClock />
+        <PomodoroClock />
     </div>
   )
 }

@@ -13,6 +13,7 @@ const Controls = props => {
 				variant="contained"
 				color={props.isPaused ? "primary" : "secondary"}
 				style={{ marginRight: "1rem" }}
+				disableElevation
 			>
 				{props.isPaused ? (
 					<>

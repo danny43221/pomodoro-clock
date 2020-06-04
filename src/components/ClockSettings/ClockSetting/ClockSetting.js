@@ -7,9 +7,11 @@ import classes from "./ClockSetting.module.css";
 const ClockSetting = props => {
 	return (
 		<div className={classes.ClockSetting}>
-			<h2>
-				{props.type === "sessionLength" ? "Session Length" : "Break Length"}
-			</h2>
+			<p>
+				{props.type === "sessionLength"
+					? "Session Length"
+					: "Resting Length"}
+			</p>
 			<div className={classes.Setter}>
 				<IconButton
 					onClick={() => props.onDecrement(props.type)}

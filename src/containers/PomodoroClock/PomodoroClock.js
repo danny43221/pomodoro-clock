@@ -3,8 +3,9 @@ import ClockSettings from "../../components/ClockSettings/ClockSettings";
 import Display from "../../components/Display/Display";
 import Controls from "../../components/Controls/Controls";
 import classes from "./PomodoroClock.module.css";
-import beep from '../../assets/beep.wav'
-import { requirePropFactory } from "@material-ui/core";
+import beep from "../../assets/beep.wav";
+import { Paper } from "@material-ui/core";
+import ClockIcon from "@material-ui/icons/Schedule";
 
 const PomodoroClock = () => {
 	const [time, setTime] = useState(1500); //seconds
@@ -80,17 +81,22 @@ const PomodoroClock = () => {
 				);
 				return !prev;
 			});
-			
+
 			const beepAudio = new Audio(beep);
 			beepAudio.loop = true;
-			beepAudio.play()
-			setTimeout(() => {beepAudio.loop = false}, 1500)	
+			beepAudio.play();
+			setTimeout(() => {
+				beepAudio.loop = false;
+			}, 700);
 		}
 	}, [time, settings]);
 
 	return (
-		<div className={classes.PomodoroClock}>
-			<h1>Pomodoro Clock</h1>
+		<Paper elevation={24} className={classes.PomodoroClock}>
+			<div style={{ position: "relative", fontSize: "4.6rem" }}>
+				<ClockIcon className={classes.ClockIcon} fontSize="inherit" />
+				<p className={classes.Title}>Pomodoro</p>
+			</div>
 			<ClockSettings
 				isPaused={isPaused}
 				settings={settings}
@@ -103,7 +109,7 @@ const PomodoroClock = () => {
 				onPause={pauseHandler}
 				onReset={resetHandler}
 			/>
-		</div>
+		</Paper>
 	);
 };
 
